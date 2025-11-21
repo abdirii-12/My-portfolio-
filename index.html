@@ -605,6 +605,241 @@ a{color:var(--accent); text-decoration:none}
 
 
   </div>
+  <!-- ================= CONTACT SECTION ================= -->
+<section id="contact" class="contact-super">
+  <!-- Floating Animation Circles -->
+  <div class="circle c1"></div>
+  <div class="circle c2"></div>
+  <div class="circle c3"></div>
+
+  <div class="contact-box">
+    <h2>Contact Me</h2>
+    <p>Let’s talk about your idea, project, or collaboration.</p>
+
+    <form class="contact-form">
+
+      <div class="field">
+        <input type="text" required>
+        <label>Your Name</label>
+        <span></span>
+      </div>
+
+      <div class="field">
+        <input type="email" required>
+        <label>Your Email</label>
+        <span></span>
+      </div>
+
+      <div class="field">
+        <textarea required></textarea>
+        <label>Your Message</label>
+        <span></span>
+      </div>
+
+      <button class="send-btn">Send Message</button>
+    </form>
+
+    <div class="direct-info">
+      <p>Or email me directly:</p>
+      <a href="abdiriiadan300@gmail.com">📧 email</a>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ================= DARK BACKGROUND ================= */
+:root{
+  --bg:#000;
+  --glass:rgba(255,255,255,0.05);
+  --accent:#00ffee;
+  --accent-2:#0ab9ff;
+  --muted:#9ca7a7;
+}
+
+/* MAIN SECTION */
+.contact-super{
+  position:relative;
+  padding:120px 20px;
+  background:var(--bg);
+  overflow:hidden;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* FLOATING ANIMATED CIRCLES */
+.circle{
+  position:absolute;
+  width:180px;
+  height:180px;
+  background:var(--accent);
+  filter:blur(100px);
+  opacity:0.3;
+  border-radius:50%;
+  animation:float 8s infinite ease-in-out;
+}
+
+.c1{ top:-60px; left:-40px; animation-delay:0s; }
+.c2{ bottom:-70px; right:-50px; animation-delay:2s; background:var(--accent-2); }
+.c3{ top:40%; left:-80px; animation-delay:4s; background:#7b00ff; }
+
+@keyframes float{
+  0%{ transform:translateY(0px); }
+  50%{ transform:translateY(-40px); }
+  100%{ transform:translateY(0px); }
+}
+
+/* CONTACT BOX */
+.contact-box{
+  width:100%;
+  max-width:700px;
+  background:var(--glass);
+  backdrop-filter:blur(20px);
+  padding:50px;
+  border-radius:30px;
+  border:1px solid rgba(255,255,255,0.1);
+  position:relative;
+  z-index:2;
+  animation:fadeUp 1s ease forwards;
+  box-shadow:0 0 40px rgba(0,255,238,0.15);
+}
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(50px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.contact-box h2{
+  text-align:center;
+  color:var(--accent);
+  font-size:42px;
+  margin:0 0 10px;
+}
+
+.contact-box p{
+  text-align:center;
+  color:var(--muted);
+  margin-bottom:40px;
+}
+
+/* FORM FIELDS */
+.field{
+  position:relative;
+  margin-bottom:32px;
+}
+
+.field input,
+.field textarea{
+  width:100%;
+  padding:16px;
+  font-size:15px;
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:14px;
+  background:var(--glass);
+  color:#fff;
+  outline:none;
+  resize:none;
+  transition:0.3s;
+}
+
+.field textarea{
+  height:130px;
+}
+
+/* LABEL ANIMATION */
+.field label{
+  position:absolute;
+  left:18px;
+  top:50%;
+  transform:translateY(-50%);
+  color:var(--muted);
+  background:transparent;
+  font-size:15px;
+  pointer-events:none;
+  transition:0.3s;
+}
+
+/* UNDERLINE EFFECT */
+.field span{
+  position:absolute;
+  bottom:0; left:0;
+  height:2px; width:0%;
+  background:var(--accent);
+  transition:0.3s;
+}
+
+/* On Focus */
+.field input:focus,
+.field textarea:focus{
+  border-color:var(--accent);
+}
+
+.field input:focus ~ label,
+.field input:valid ~ label,
+.field textarea:focus ~ label,
+.field textarea:valid ~ label{
+  top:-10px;
+  background:#000;
+  padding:0px 6px;
+  border-radius:6px;
+  font-size:12px;
+  color:var(--accent);
+}
+
+.field input:focus ~ span,
+.field textarea:focus ~ span{
+  width:100%;
+}
+
+/* BUTTON */
+.send-btn{
+  width:100%;
+  padding:16px;
+  font-size:18px;
+  border:none;
+  background:var(--accent);
+  color:#000;
+  border-radius:14px;
+  cursor:pointer;
+  font-weight:700;
+  transition:0.3s;
+}
+
+.send-btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 30px rgba(0,255,238,0.4);
+}
+
+/* DIRECT CONTACT */
+.direct-info{
+  text-align:center;
+  margin-top:30px;
+  color:var(--muted);
+}
+
+.direct-info a{
+  color:var(--accent-2);
+  text-decoration:none;
+  font-size:17px;
+}
+
+/* RESPONSIVE */
+@media(max-width:500px){
+  .contact-box{
+    padding:30px;
+  }
+  .contact-box h2{
+    font-size:32px;
+  }
+}
+</style>
+
 
   <div class="footer-note">
     🧠 Explore • Learn • Build  
