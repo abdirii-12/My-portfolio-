@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARIZAK PORTFOLIO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link rel="manifest" href="manifest.json">
+    <style>
+        :root {
+            --primary-color: #007bff; /* Blue */
+            --secondary-color: #28a745; /* Green */
+            --background-color: #f8f9fa; /* Light Gray */
+            --card-background: #ffffff; /* White */
+            --text-color: #343a40; /* Dark Gray */
+            --heading-color: #0056b3; /* Darker Blue */
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        .header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .card {
+            background-color: var(--card-background);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+            border-top: 5px solid var(--primary-color);
+        }
+        h1, h2, h3 {
+            color: var(--heading-color);
+        }
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+        .skill-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .skill-list li {
+            background: #e9ecef;
+            padding: 10px 15px;
+            border-radius: 6px;
+            border-left: 5px solid var(--secondary-color);
+            font-weight: 500;
+        }
+        .project-link a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .project-link a:hover {
+            text-decoration: underline;
+        }
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            position: relative;
+        }
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+        }
+        .photo-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            aspect-ratio: 1 / 1;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .service-list {
+            list-style: none;
+            padding: 0;
+        }
+        .service-list li {
+            margin-bottom: 8px;
+            padding-left: 1.5em;
+            text-indent: -1.5em;
+        }
+        .service-list li::before {
+            content: "✨";
+            margin-right: 0.5em;
+        }
+    </style>
+</head>
+<body>
+
+    <audio controls loop autoplay style="display:none;">
+        <source src="https://raw.githubusercontent.com/glen-hub1/All-projects-in-one/main/Iyanya_%20Mayorkun%20_%20Tekno%20-%20_One%20Side_%20(Remix)%20%5BOfficial%20Music%20Video%5D(MP3_160K).mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="header">
+        <h1>ARIZAK PORTFOLIO</h1>
+        <h2>ARIZAK TECH</h2>
+    </div>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>👋 About Me</h2>
+            <p>Hello! I’m ARIZAK-MD — a self-taught developer specializing in WhatsApp bots, automation systems, and SMM tools. My goal is to make technology simple and powerful for everyone.</p>
+        </div>
+
+        <div class="card">
+            <h2>💡 Key Skills</h2>
+            <ul class="skill-list">
+                <li><i class="fab fa-whatsapp"></i> WhatsApp Bot Development: Expertise in developing robust WhatsApp bots.</li>
+                <li><i class="fas fa-code"></i> Web Development: Proficient in HTML, CSS, JavaScript.</li>
+                <li><i class="fas fa-terminal"></i> Programming Languages: Node.js & Python.</li>
+                <li><i class="fas fa-paint-brush"></i> Web Design & Hosting: Skilled in designing and hosting professional websites.</li>
+                <li><i class="fas fa-plug"></i> App Automation & APIs: Experienced in app automation and API integration.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>🛠️ Projects</h2>
+            <p>Check out my main repository on GitHub:</p>
+            <p class="project-link">
+                <a href="https://github.com/arizak-md/arizak" target="_blank">
+                    <i class="fab fa-github"></i> arizak-md/arizak
+                </a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>📞 Contact & Actions</h2>
+
+            <div class="btn-group">
+                <a href="https://whatsapp.com/channel/0029Vb4q0dBF1YlYwsYt9N0l" target="_blank" class="btn btn-secondary">
+                    <i class="fab fa-whatsapp"></i> Join WhatsApp Channel
+                </a>
+                <a href="tel:+254727740389" class="btn btn-primary">
+                    <i class="fas fa-phone"></i> Call Me
+                </a>
+                <a href="https://wa.me/254727740389" target="_blank" class="btn btn-secondary">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Me
+                </a>
+                <a href="mailto:abdiriiadan3@gmail.com" class="btn btn-primary">
+                    <i class="far fa-envelope"></i> Email Me
+                </a>
+                <a href="https://github.com/arizak-md" target="_blank" class="btn btn-secondary">
+                    <i class="fab fa-github"></i> GitHub Profile
+                </a>
+
+                <a href="#" class="btn btn-primary" download="ARIZAK_TECH_CV.pdf">
+                    <i class="fas fa-download"></i> Download CV (Placeholder)
+                </a>
+                <button class="btn btn-secondary" onclick="openModal('photosModal')">
+                    <i class="fas fa-image"></i> ARIZAK PHOTOS
+                </button>
+                <button class="btn btn-primary" onclick="openModal('moreModal')">
+                    <i class="fas fa-ellipsis-h"></i> MORE
+                </button>
+                <button class="btn btn-secondary" onclick="openModal('backgroundModal')">
+                    <i class="fas fa-map-marker-alt"></i> Background
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="photosModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('photosModal')">&times;</span>
+            <h3>📸 ARIZAK PHOTOS</h3>
+            <div class="photo-gallery">
+                <img src="https://files.catbox.moe/f3b7y7.jpg" alt="Photo 1">
+                <img src="https://files.catbox.moe/z6tnl2.jpg" alt="Photo 2">
+                <img src="https://files.catbox.moe/siv633.jpg" alt="Photo 3">
+                <img src="https://files.catbox.moe/z9jq5r.jpg" alt="Photo 4">
+            </div>
+        </div>
+    </div>
+
+    <div id="moreModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('moreModal')">&times;</span>
+            <h3>✨ INBOX FOR THESE SERVICES</h3>
+            <ul class="service-list">
+                <li>WhatsApp bot deployment</li>
+                <li>Social media boost</li>
+                <li>VPN files</li>
+                <li>WhatsApp virtual numbers</li>
+                <li>Cast</li>
+                <li>Panels for boosting all social media platforms</li>
+                <li>WhatsApp account unban</li>
+                <li>Friendship</li>
+                <li>And many more.</li>
+            </ul>
+            <p style="margin-top: 20px;">
+                Inbox me on this number on WhatsApp:
+                <a href="https://wa.me/254727740389" target="_blank" style="color: var(--secondary-color); font-weight: bold;">
+                    <i class="fab fa-whatsapp"></i> +254 727 740 389
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <div id="backgroundModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('backgroundModal')">&times;</span>
+            <h3>🌍 Background</h3>
+            <p>I am from: Kenya.</p>
+            <p>Country: Mandera</p>
+            <p>Religion: Muslim</p>
+        </div>
+    </div>
+
+    <script>
+        // Modal functions
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
