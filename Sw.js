@@ -1,7 +1,7 @@
 self.addEventListener("install", (event) => {
   console.log("Service Worker Installed");
   event.waitUntil(
-    caches.open("elijah-tech-v1").then((cache) => {
+    caches.open("ARIZAK-TECH-v1").then((cache) => {
       return cache.addAll([
         "./",
         "./index.html",
